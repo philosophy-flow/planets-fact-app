@@ -4,7 +4,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from 'react-router-dom';
 
 
@@ -32,6 +33,7 @@ function App() {
           {
             data.map(planet => (
               <Link 
+                key={planet.name}
                 to={`/${planet.name.toLowerCase()}`} 
                 onClick={() => handleClick(`${planet.name}`)}
               >
@@ -42,6 +44,7 @@ function App() {
         </nav>
 
         <Switch>
+          <Route exact path="/"><Redirect to={`/${activePlanet.name}`}/></Route>
           <Route path={`/${activePlanet.name}`}>
             <Planet data={activePlanet} />
           </Route>
