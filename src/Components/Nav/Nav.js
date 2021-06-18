@@ -8,11 +8,9 @@ function Nav({data, selectPlanet}) {
   const handleClick = (planet) => {
     setIsOpen(!isOpen);
     if (planet) {
-      console.log('working');
+      selectPlanet(`${planet}`);
     }
-    selectPlanet(`${planet}`);
   }
-
 
   return (
     <nav className="Nav">
