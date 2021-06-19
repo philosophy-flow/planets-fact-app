@@ -23,20 +23,15 @@ function Nav({data, selectPlanet}) {
       {
         data.map(planet => (
           <li key={planet.name}>
-            <span className={`mobile-nav-icon nav-icon-${planet.name.toLowerCase()}`}></span>
-            <Link 
+            <Link className="nav-link"
               to={`/${planet.name.toLowerCase()}`} 
               onClick={() => handleClick(`${planet.name}`)}
             >
-              {planet.name}
-            </Link>
-            <Link className="mobile-nav-btn"
-              to={`/${planet.name.toLowerCase()}`} 
-              onClick={() => handleClick(`${planet.name}`)}
-            >
+              <span className={`mobile-nav-icon nav-icon-${planet.name.toLowerCase()}`}></span>
+              <span className="nav-planet-name">{planet.name}</span>
               <FontAwesomeIcon 
-                icon={faChevronRight} 
                 className="arrow"
+                icon={faChevronRight} 
                 onClick={() => handleClick(`${planet.name}`)}
               />
             </Link>
