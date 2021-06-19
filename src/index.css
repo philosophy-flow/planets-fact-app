@@ -21,14 +21,14 @@
   --dark: #070724;
   --dark-grey: #38384F;
   --light-grey: #838391;
-  --light-blue: #419EBB;
-  --dark-blue: #2D68F0;
-  --yellow: #EDA249;
-  --purple: #6F2ED6;
-  --red-orange: #D14C32;
-  --red: #D83A34;
-  --orange: #CD5120;
-  --green: #1EC2A4;
+  --mercury-color: #419EBB;
+  --neptune-color: #2D68F0;
+  --venus-color: #EDA249;
+  --earth-color: #6F2ED6;
+  --mars-color: #D14C32;
+  --jupiter-color: #D83A34;
+  --saturn-color: #CD5120;
+  --uranus-color: #1EC2A4;
 }
 
 
@@ -47,13 +47,16 @@ h1, h2, h3, h4 {
   line-height: 1;
 }
 h1 {font-size: 2.5rem;}
-h2 {font-size: 1.75rem;}
+h2 {font-size: 1.75rem; font-weight: normal;}
 h3 {font-size: 1.25rem;}
 h4 {font-size: 1.25rem;}
 
 p {font-size: .6875rem; line-height: 1.375rem;}
 
-
+.Planet {
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
 
 
 

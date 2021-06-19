@@ -2,6 +2,10 @@ import './Nav.css';
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 
+/* chevron icon for mobile menu */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faChevronRight} from '@fortawesome/free-solid-svg-icons';
+
 function Nav({data, selectPlanet}) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,13 +23,24 @@ function Nav({data, selectPlanet}) {
       {
         data.map(planet => (
           <li key={planet.name}>
+            <span className={`mobile-nav-icon nav-icon-${planet.name.toLowerCase()}`}></span>
             <Link 
               to={`/${planet.name.toLowerCase()}`} 
               onClick={() => handleClick(`${planet.name}`)}
             >
               {planet.name}
             </Link>
-          </li>
+            <Link className="mobile-nav-btn"
+              to={`/${planet.name.toLowerCase()}`} 
+              onClick={() => handleClick(`${planet.name}`)}
+            >
+              <FontAwesomeIcon 
+                icon={faChevronRight} 
+                className="arrow"
+                onClick={() => handleClick(`${planet.name}`)}
+              />
+            </Link>
+          </li>  
         ))
       }
       </ul>

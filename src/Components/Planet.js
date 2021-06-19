@@ -5,7 +5,6 @@ function Planet({data}) {
       <br/><br/>
       {data.overview.content}
       <br/><br/>
-      {data.overview.source}
     </div>
   );
 }
