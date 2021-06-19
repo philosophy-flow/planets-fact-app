@@ -8,22 +8,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .nav-menu {
   position: fixed;
   right: -100%;
-  top: 5rem;
-  top: 0;
+  top: 3.875rem;
   bottom: 0;
 
   width: 100%;
-  border: 1px solid red;
   text-align: center;
   transition: 0.3s;
 
-  background-color: #000;
+  background-color: var(--dark);
 }
 
 .nav-menu li {
@@ -54,7 +53,7 @@
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 
-  background-color: #101010;
+  background-color: var(--light);
 }
 
 .burger-button.active .bar:nth-child(2) {
