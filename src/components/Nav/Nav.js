@@ -17,7 +17,7 @@ function Nav({data, selectPlanet}) {
   }
 
   return (
-    <nav className="Nav">
+    <header className="Nav">
       <h2>The Planets</h2>
       <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
       {
@@ -47,7 +47,7 @@ function Nav({data, selectPlanet}) {
         <span className="bar"></span>
         <span className="bar"></span>
       </button>
-    </nav>
+    </header>
 
   );
 }

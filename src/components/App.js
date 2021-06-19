@@ -13,7 +13,7 @@ import Nav from './Nav/Nav';
 
 // import all planet data + component
 import data from '../data';
-import Planet from './Planet';
+import Planet from './Planet/Planet';
 
 
 function App() {
@@ -28,17 +28,14 @@ function App() {
   }
 
   return (
-    <Router>
-      <div className="App">
-        <Nav data={data} selectPlanet={selectPlanet} />
-        <Switch>
-          <Route exact path="/"><Redirect to={`/${activePlanet.name}`}/></Route>
-          <Route path={`/${activePlanet.name}`}>
-            <Planet data={activePlanet} />
-          </Route>
-        </Switch>
-        
-      </div>
+    <Router className="App">
+      <Nav data={data} selectPlanet={selectPlanet} />
+      <Switch>
+        <Route exact path="/"><Redirect to={`/${activePlanet.name}`}/></Route>
+        <Route path={`/${activePlanet.name}`}>
+          <Planet planet={activePlanet} />
+        </Route>
+      </Switch> 
     </Router>
   );
 }
