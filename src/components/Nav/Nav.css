@@ -23,6 +23,8 @@
 
   background-color: var(--dark);
   padding: 2.75rem 6.4%;
+
+  z-index: 100;
 }
 .nav-menu.active {right: 0;}
 

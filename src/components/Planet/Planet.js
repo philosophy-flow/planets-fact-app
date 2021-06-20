@@ -5,11 +5,9 @@ function Planet({planet}) {
     <main className="Planet">
       <section className="planet-content-container">
         <nav className="planet-navigation-container">
-          <ul>
-            <li>Overview</li>
-            <li>Structure</li>
-            <li>Surface</li>
-          </ul>
+          <h3>Overview</h3>
+          <h3>Structure</h3>
+          <h3>Surface</h3>
         </nav>
         <figure className="planet-image-container">
           <img src={planet.images.planet} alt="planet" />
@@ -23,23 +21,22 @@ function Planet({planet}) {
 
       <section className="planet-stats-container">
         <div className="planet-stat">
-          <h3>{planet.rotation} days</h3>
-          <p>ROTATION TIME</p>
+          <h4>ROTATION TIME</h4>
+          <strong>{planet.rotation} days</strong>
         </div>
         <div className="planet-stat">
-          <h3>{planet.revolution} days</h3>
-          <p>REVOLUTION TIME</p>
+          <h4>REVOLUTION TIME</h4>
+          <strong>{planet.revolution} days</strong>
         </div>
         <div className="planet-stat">
-          <h3>{planet.radius} km</h3>
-          <p>RADIUS</p>
+          <h4>RADIUS</h4>
+          <strong>{planet.radius} km</strong>
         </div>
         <div className="planet-stat">
-          <h3>{planet.temperature} °C</h3>
-          <p>RAVERAGE TEMP.</p>
+          <h4>RAVERAGE TEMP.</h4>
+          <strong>{planet.temperature} °C</strong>
         </div>
       </section>
-
     </main>
   );
 }
