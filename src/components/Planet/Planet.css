@@ -185,4 +185,21 @@
   .saturn-btn.active {background-color: var(--saturn-color);}
   .uranus-btn.active {background-color: var(--uranus-color);}
   .neptune-btn.active {background-color: var(--neptune-color);}
+
+
+  .planet-image-container {
+    height: 28.75rem;
+  }
+  .mercury-image {width: 11.5rem;}
+  .venus-image {width: 15.875rem;}
+  .earth-image {width: 17.812rem;}
+  .mars-image {width: 13.375rem;}
+  .jupiter-image {width: 23rem;}
+  .saturn-image {width: 26.375rem;}
+  .uranus-image {width: 18.125rem;}
+  .neptune-image {width: 17.812rem;}
+  
+  .planet-geology {
+    width: 5rem;
+  }
 }
