@@ -30,19 +30,19 @@ function Planet({planet}) {
       <section className="planet-stats-container">
         <div className="planet-stat">
           <h3>ROTATION TIME</h3>
-          <strong>{planet.rotation} days</strong>
+          <strong>{planet.rotation}</strong>
         </div>
         <div className="planet-stat">
           <h3>REVOLUTION TIME</h3>
-          <strong>{planet.revolution} days</strong>
+          <strong>{planet.revolution}</strong>
         </div>
         <div className="planet-stat">
-          <h4>RADIUS</h4>
-          <strong>{planet.radius} km</strong>
+          <h3>RADIUS</h3>
+          <strong>{planet.radius}</strong>
         </div>
         <div className="planet-stat">
-          <h3>RAVERAGE TEMP.</h3>
-          <strong>{planet.temperature} °C</strong>
+          <h3>AVERAGE TEMP.</h3>
+          <strong>{planet.temperature}</strong>
         </div>
       </section>
     </main>

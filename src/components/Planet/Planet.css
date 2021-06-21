@@ -63,3 +63,33 @@
   margin-bottom: -.15rem;
   margin-left: .25rem;
 }
+
+
+.planet-stats-container {
+  width: 87.2%;
+  margin: 0 auto 2rem;
+  opacity: .9;
+}
+
+.planet-stat {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: .5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: .75rem 1.5rem;
+}
+
+.planet-stat:last-child {
+  margin-bottom: 0;
+}
+
+.planet-stat strong {
+  text-transform: uppercase;
+  font-family: 'Antonio', sans-serif; 
+  font-size: 1.25rem;
+  letter-spacing: -.75px;
+  font-weight: 400;
+}
