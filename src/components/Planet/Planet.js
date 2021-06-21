@@ -1,27 +1,50 @@
 import './Planet.css';
+import React, {useState} from 'react';
 
 /* link icon for source */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faExternalLinkSquareAlt} from '@fortawesome/free-solid-svg-icons';
 
 function Planet({planet}) {
+  const [activeContent, setActiveContent] = useState('overview');
+
+  // set active text & source
+  let activeText = '';
+  let activeSource = '';
+  switch (activeContent) {
+    case 'overview':
+      activeText = planet.overview.content;
+      activeSource = planet.overview.source;
+      break;
+    case 'structure':
+      activeText = planet.structure.content;
+      activeSource = planet.structure.source;
+      break;
+    case 'surface':
+      activeText = planet.geology.content;
+      activeSource = planet.geology.source;
+      break;
+    default:
+      break;
+  }
+
   return (
     <main className="Planet">
       <section className="planet-content-container">
         <nav className="planet-navigation-container">
-          <button>Overview</button>
-          <button>Structure</button>
-          <button>Surface</button>
+          <button onClick={() => setActiveContent('overview')}>Overview</button>
+          <button onClick={() => setActiveContent('structure')}>Internal Structure</button>
+          <button onClick={() => setActiveContent('surface')}>Surface Geology</button>
         </nav>
         <figure className="planet-image-container">
           <img className={`${planet.name.toLowerCase()}-image`} src={planet.images.planet} alt="planet" />
         </figure>
         <article className="planet-text-container">
           <h1>{planet.name}</h1>
-          <p className="planet-text">{planet.overview.content}</p>
+          <p className="planet-text">{activeText}</p>
           <div className="planet-source">
             <span>Source : </span>
-            <a href={planet.overview.source}> Wikipedia</a>
+            <a href={activeSource}> Wikipedia</a>
             <span><FontAwesomeIcon className="link-icon" icon={faExternalLinkSquareAlt} /></span>
           </div>
         </article>
