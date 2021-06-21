@@ -10,7 +10,7 @@ function Planet({planet}) {
           <h3>Surface</h3>
         </nav>
         <figure className="planet-image-container">
-          <img src={planet.images.planet} alt="planet" />
+          <img className={`${planet.name.toLowerCase()}-image`} src={planet.images.planet} alt="planet" />
         </figure>
         <article className="planet-text-container">
           <h1>{planet.name}</h1>
