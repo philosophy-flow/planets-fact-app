@@ -32,9 +32,27 @@ function Planet({planet}) {
     <main className="Planet">
       <section className="planet-content-container">
         <nav className="planet-navigation-container">
-          <button onClick={() => setActiveContent('overview')}>Overview</button>
-          <button onClick={() => setActiveContent('structure')}>Internal Structure</button>
-          <button onClick={() => setActiveContent('surface')}>Surface Geology</button>
+          <button 
+            className=
+              {`content-btn ${planet.name.toLowerCase()}-btn ${activeContent === 'overview' ? 'active' : ''}`}
+            onClick={() => setActiveContent('overview')}
+          >
+            Overview
+          </button>
+          <button 
+            className=
+              {`content-btn ${planet.name.toLowerCase()}-btn ${activeContent === 'structure' ? 'active' : ''}`}
+            onClick={() => setActiveContent('structure')}
+          >
+            Internal Structure
+          </button>
+          <button 
+            className=
+              {`content-btn ${planet.name.toLowerCase()}-btn ${activeContent === 'surface' ? 'active' : ''}`}
+            onClick={() => setActiveContent('surface')}
+          >
+            Surface Geology
+          </button>
         </nav>
         <figure className="planet-image-container">
           <img className={`${planet.name.toLowerCase()}-image`} src={planet.images.planet} alt="planet" />

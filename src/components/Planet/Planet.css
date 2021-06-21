@@ -17,8 +17,15 @@
 
   padding: 1.25rem 0;
   width: 5rem;
-
+  height: 4.25rem;
 }
+
+.content-btn.active {
+  color: var(--light);
+}
+.mercury-btn.active {border-bottom: 4px solid var(--mercury-color);}
+
+
 
 .planet-image-container {
   width: 100%;
