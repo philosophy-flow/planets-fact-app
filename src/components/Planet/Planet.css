@@ -41,6 +41,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: relative;
 }
 .mercury-image {width: 29.6%;}
 .venus-image {width: 41%;}
@@ -50,6 +52,12 @@
 .saturn-image {width: 68.3%;}
 .uranus-image {width: 46.9%;}
 .neptune-image {width: 46.1%;}
+
+.planet-geology {
+  width: 2.75rem;
+  position: absolute;
+  bottom: 4rem;
+}
 
 .planet-text-container {
   text-align: center;

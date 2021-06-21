@@ -8,21 +8,25 @@ import {faExternalLinkSquareAlt} from '@fortawesome/free-solid-svg-icons';
 function Planet({planet}) {
   const [activeContent, setActiveContent] = useState('overview');
 
-  // set active text & source
+  // set active text, source, and image
   let activeText = '';
   let activeSource = '';
+  let activeImage = '';
   switch (activeContent) {
     case 'overview':
       activeText = planet.overview.content;
       activeSource = planet.overview.source;
+      activeImage = planet.images.planet;
       break;
     case 'structure':
       activeText = planet.structure.content;
       activeSource = planet.structure.source;
+      activeImage = planet.images.internal;
       break;
     case 'surface':
       activeText = planet.geology.content;
       activeSource = planet.geology.source;
+      activeImage = planet.images.planet;
       break;
     default:
       break;
@@ -55,7 +59,11 @@ function Planet({planet}) {
           </button>
         </nav>
         <figure className="planet-image-container">
-          <img className={`${planet.name.toLowerCase()}-image`} src={planet.images.planet} alt="planet" />
+          <img className={`${planet.name.toLowerCase()}-image`} src={activeImage} alt="planet" />
+          {
+            activeContent === 'surface' && 
+            <img className="planet-geology" src={planet.images.geology} alt="planet-geology" />
+          }
         </figure>
         <article className="planet-text-container">
           <h1>{planet.name}</h1>
