@@ -41,21 +41,21 @@ function Planet({planet}) {
               {`content-btn ${planet.name.toLowerCase()}-btn ${activeContent === 'overview' ? 'active' : ''}`}
             onClick={() => setActiveContent('overview')}
           >
-            Overview
+            <span className="planet-nav-number">01 </span>Overview
           </button>
           <button 
             className=
               {`content-btn ${planet.name.toLowerCase()}-btn ${activeContent === 'structure' ? 'active' : ''}`}
             onClick={() => setActiveContent('structure')}
           >
-            Internal Structure
+            <span className="planet-nav-number">02 </span>Internal Structure
           </button>
           <button 
             className=
               {`content-btn ${planet.name.toLowerCase()}-btn ${activeContent === 'surface' ? 'active' : ''}`}
             onClick={() => setActiveContent('surface')}
           >
-            Surface Geology
+            <span className="planet-nav-number">03 </span>Surface Geology
           </button>
         </nav>
         <figure className="planet-image-container">
