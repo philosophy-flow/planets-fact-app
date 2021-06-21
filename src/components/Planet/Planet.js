@@ -1,5 +1,9 @@
 import './Planet.css';
 
+/* link icon for source */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faExternalLinkSquareAlt} from '@fortawesome/free-solid-svg-icons';
+
 function Planet({planet}) {
   return (
     <main className="Planet">
@@ -15,7 +19,11 @@ function Planet({planet}) {
         <article className="planet-text-container">
           <h1>{planet.name}</h1>
           <p className="planet-text">{planet.overview.content}</p>
-          <p className="planet-source">{planet.overview.source}</p>
+          <div className="planet-source">
+            <span>Source : </span>
+            <a href={planet.overview.source}> Wikipedia</a>
+            <span><FontAwesomeIcon className="link-icon" icon={faExternalLinkSquareAlt} /></span>
+          </div>
         </article>
       </section>
 

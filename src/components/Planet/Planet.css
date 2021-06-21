@@ -35,3 +35,31 @@
 .saturn-image {width: 68.3%;}
 .uranus-image {width: 46.9%;}
 .neptune-image {width: 46.1%;}
+
+.planet-text-container {
+  text-align: center;
+  width: 87.2%;
+  margin: 0 auto 1.75rem;
+  opacity: .9;
+}
+
+.planet-text {
+  margin: 1rem 0 2rem;
+}
+
+.planet-source {
+  font-size: .75rem;
+  opacity: .6;
+  font-weight: 200;
+}
+
+.planet-source a {
+  color: inherit;
+  font-weight: 700;
+}
+
+.link-icon {
+  font-size: 1rem;
+  margin-bottom: -.15rem;
+  margin-left: .25rem;
+}
