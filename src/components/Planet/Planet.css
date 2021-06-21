@@ -24,6 +24,13 @@
   color: var(--light);
 }
 .mercury-btn.active {border-bottom: 4px solid var(--mercury-color);}
+.venus-btn.active {border-bottom: 4px solid var(--venus-color);}
+.earth-btn.active {border-bottom: 4px solid var(--earth-color);}
+.mars-btn.active {border-bottom: 4px solid var(--mars-color);}
+.jupiter-btn.active {border-bottom: 4px solid var(--jupiter-color);}
+.saturn-btn.active {border-bottom: 4px solid var(--saturn-color);}
+.uranus-btn.active {border-bottom: 4px solid var(--uranus-color);}
+.neptune-btn.active {border-bottom: 4px solid var(--neptune-color);}
 
 
 

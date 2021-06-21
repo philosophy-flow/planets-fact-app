@@ -62,7 +62,7 @@ function Planet({planet}) {
           <p className="planet-text">{activeText}</p>
           <div className="planet-source">
             <span>Source : </span>
-            <a href={activeSource}> Wikipedia</a>
+            <a href={activeSource} target="_blank" rel="noreferrer"> Wikipedia</a>
             <span><FontAwesomeIcon className="link-icon" icon={faExternalLinkSquareAlt} /></span>
           </div>
         </article>
