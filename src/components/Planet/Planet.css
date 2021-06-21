@@ -45,13 +45,13 @@
   position: relative;
 }
 .mercury-image {width: 29.6%;}
-.venus-image {width: 41%;}
-.earth-image {width: 46%;}
-.mars-image {width: 34.4%;}
-.jupiter-image {width: 59.7%;}
-.saturn-image {width: 68.3%;}
-.uranus-image {width: 46.9%;}
-.neptune-image {width: 46.1%;}
+.venus-image {width: 7rem;}
+.earth-image {width: 10.75rem;}
+.mars-image {width: 8rem;}
+.jupiter-image {width: 14rem;}
+.saturn-image {width: 16rem;}
+.uranus-image {width: 11rem;}
+.neptune-image {width: 10.75rem;}
 
 .planet-geology {
   width: 2.75rem;
