@@ -80,7 +80,6 @@
 }
 
 
-
 /* HAMBURGER BUTTON */
 .burger-button {
   background-color: transparent;
@@ -114,29 +113,47 @@
 
 
 
+/* -------------------------------------------------------------------------*/
+/* TABLET ------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------*/
+
+
+
 @media only screen and (min-width: 768px) {
   .Nav {
     flex-direction: column;
+    padding: 2rem 0 1.75rem;
   }
+
+  .mobile-nav-icon, .arrow, .burger-button {
+    display: none;
+  }
+
   .nav-menu {
     position: static;
     display: flex;
-    justify-content: space-around
+    justify-content: space-between;
+    width: 87%;
+    padding: 0;
+    margin: 2.5rem 0 0;
+    height: .875rem;
   }
 
-  .burger-button {
-    display: none;
+  .nav-menu li {
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .nav-planet-name {
+    font-size: .6875rem;
+    color:rgba(255, 255, 255, 0.8);
+    transition: .3s;
+  }
+
+  .nav-planet-name.active {
+    color:var(--light); 
+    cursor: default;
+    border-bottom: 1px solid var(--light);
   }
 }
 
-
-@media only screen and (min-width: 1200px) {
-  .Nav {
-    flex-direction: row;
-  }
-
-  .nav-menu {
-    width: 42rem
-  }
-
-}

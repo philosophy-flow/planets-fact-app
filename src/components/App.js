@@ -29,7 +29,11 @@ function App() {
 
   return (
     <Router className="App">
-      <Nav data={data} selectPlanet={selectPlanet} />
+      <Nav 
+        data={data} 
+        selectPlanet={selectPlanet} 
+        activePlanet={activePlanet} 
+      />
       <Switch>
         <Route exact path="/"><Redirect to={`/${activePlanet.name}`}/></Route>
         <Route path={`/${activePlanet.name}`}>

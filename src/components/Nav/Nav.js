@@ -6,7 +6,9 @@ import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faChevronRight} from '@fortawesome/free-solid-svg-icons';
 
-function Nav({data, selectPlanet}) {
+
+
+function Nav({data, selectPlanet, activePlanet}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = (planet) => {
@@ -28,7 +30,12 @@ function Nav({data, selectPlanet}) {
               onClick={() => handleClick(`${planet.name}`)}
             >
               <span className={`mobile-nav-icon nav-icon-${planet.name.toLowerCase()}`}></span>
-              <span className="nav-planet-name">{planet.name}</span>
+              <span 
+                className=
+                {`nav-planet-name ${activePlanet.name === planet.name ? 'active' : ''}`}
+              >
+                {planet.name}
+              </span>
               <FontAwesomeIcon 
                 className="arrow"
                 icon={faChevronRight} 
