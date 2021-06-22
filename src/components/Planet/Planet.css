@@ -139,7 +139,7 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    grid-auto-rows: minmax(min-content, max-content);
     gap: 0px 0px; 
     grid-template-areas: 
       "planet-image-container planet-image-container planet-image-container planet-image-container planet-image-container"
@@ -201,5 +201,39 @@
   
   .planet-geology {
     width: 5rem;
+  }
+
+
+  .planet-text-container {
+    height: 254px;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .planet-text {
+    margin: 1.5rem 0 2rem;
+  }
+
+
+  .planet-stats-container {
+    display: flex;
+    width: 90%;
+  }
+  
+  .planet-stat { 
+    margin: 0 .75rem 0 0;
+    flex-direction: column; 
+    align-items: flex-start;
+    width: 25%;
+    padding: 1rem 1rem;
+  }
+  
+  .planet-stat:last-child {
+    margin-right: 0;
+  }
+  
+  .planet-stat strong {
+    margin-top: .6rem;
+    font-size: 1.5rem;
   }
 }
