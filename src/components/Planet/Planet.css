@@ -245,10 +245,43 @@
 
 
 @media only screen and (min-width: 1440px) {
-  .planet-source {font-size: .875rem;}
 
+  .planet-source {font-size: .875rem;}
   .planet-stat strong {
     font-size: 2.5rem;
+  }
+
+  .planet-content-container {
+    width: 77%;
+    height: 36.375rem;
+    margin: 6rem auto 4.75rem;
+
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    grid-template-areas: 
+    "planet-image-container planet-image-container planet-text-container"
+    "planet-image-container planet-image-container planet-navigation-container"; 
+  }
+
+  .planet-image-container {
+    height: 100%;
+  }
+  .mercury-image {width: 18.125rem;}
+  .venus-image {width: 25rem;}
+  .earth-image {width: 28.125rem;}
+  .mars-image {width: 21rem;}
+  .jupiter-image {width: 36.375rem;}
+  .saturn-image {width: 41.825rem;}
+  .uranus-image {width: 28.625rem;}
+  .neptune-image {width: 28.125rem;}
+
+  .planet-geology {
+    width: 10.25rem;
+    bottom: 0;
+  }
+
+  .planet-stats-container {
+    width: 77%;
   }
 }
 
