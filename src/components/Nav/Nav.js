@@ -1,5 +1,5 @@
 import './Nav.css';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
 /* chevron icon for mobile menu */
@@ -18,6 +18,20 @@ function Nav({data, selectPlanet, activePlanet}) {
     }
   }
 
+  // detect resize to reset open state when transitioning to small screen
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsOpen(false);
+      }
+    }
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, [])
+
+
+  console.log(isOpen);
   return (
     <header className="Nav">
       <h2>The Planets</h2>
