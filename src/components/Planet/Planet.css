@@ -280,6 +280,10 @@
     bottom: 0;
   }
 
+  .planet-navigation-container {
+    padding-top: 3.125rem;
+  }
+
   .planet-stats-container {
     width: 77%;
   }
